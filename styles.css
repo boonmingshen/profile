@@ -185,7 +185,7 @@ h1, h2, h3 {
 
 /* Mobile Toggle Button */
 .mobile-toggle {
-  display: none;
+  display: none; /* Strictly hidden on desktop */
   background: none;
   border: none;
   color: var(--text-primary);
@@ -196,7 +196,7 @@ h1, h2, h3 {
 /* Mobile Navigation */
 @media (max-width: 768px) {
   .mobile-toggle {
-    display: block;
+    display: block; /* Visible ONLY on mobile */
   }
 
   .nav {
@@ -215,7 +215,7 @@ h1, h2, h3 {
     /* Animation State: Hidden */
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 90;
+    z-index: -1; /* Hide behind header when closed */
     opacity: 0;
     pointer-events: none;
   }
@@ -225,6 +225,7 @@ h1, h2, h3 {
     transform: translateY(0);
     opacity: 1;
     pointer-events: all;
+    z-index: 99; /* Just below header (z=100) */
   }
 
   .nav-link {

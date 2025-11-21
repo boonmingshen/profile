@@ -19,9 +19,9 @@
 <script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
   }
 }
@@ -45,11 +45,7 @@
                 <span class="logo-text">Ming.dev</span>
             </div>
 
-            <!-- Mobile Toggle Button -->
-            <button class="mobile-toggle" aria-label="Toggle navigation">
-                <i data-lucide="menu" width="24" height="24"></i>
-            </button>
-
+            <!-- Nav Menu -->
             <nav class="nav">
                 <a href="#experience" class="nav-link"><span class="nav-num">01.</span> Experience</a>
                 <a href="#skills" class="nav-link"><span class="nav-num">02.</span> Skills</a>
@@ -59,6 +55,11 @@
                     <span>Resume</span>
                 </a>
             </nav>
+
+            <!-- Mobile Toggle Button (Placed after Nav for better flex positioning) -->
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+                <i data-lucide="menu" width="24" height="24"></i>
+            </button>
         </div>
     </header>
 
@@ -397,11 +398,7 @@
         mobileToggle.addEventListener('click', () => {
             nav.classList.toggle('active');
             
-            // Toggle Icon (Menu <-> X)
-            const icon = mobileToggle.querySelector('i'); // Assuming SVG is replaced
-            // Re-rendering icon is complex with Lucide script, simpler to toggle class and let CSS handle it,
-            // or just keep the menu icon. 
-            // Simple accessibility toggle:
+            // Simple toggle logic
             const isExpanded = nav.classList.contains('active');
             mobileToggle.setAttribute('aria-expanded', isExpanded);
         });
