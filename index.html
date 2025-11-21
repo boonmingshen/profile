@@ -19,9 +19,9 @@
 <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
     "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
   }
 }
@@ -44,6 +44,12 @@
                 </div>
                 <span class="logo-text">Ming.dev</span>
             </div>
+
+            <!-- Mobile Toggle Button -->
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+                <i data-lucide="menu" width="24" height="24"></i>
+            </button>
+
             <nav class="nav">
                 <a href="#experience" class="nav-link"><span class="nav-num">01.</span> Experience</a>
                 <a href="#skills" class="nav-link"><span class="nav-num">02.</span> Skills</a>
@@ -224,7 +230,7 @@
                         <div class="timeline-card">
                             <div class="card-top">
                                 <div class="job-role">
-                                    <h3 class="job-title">Manufacturing Process Engineer</h3>
+                                    <h3 class="job-title">Shopfloor Engineer Intern</h3>
                                     <span class="company-name">@ Celestica</span>
                                 </div>
                                 <div class="job-meta">
@@ -335,7 +341,7 @@
                                 <span class="edu-year">2018 - 2022</span>
                             </div>
                             <div class="degree">B.Eng Electrical & Computer Systems (Hons)</div>
-                            <div class="grade-badge">First Class Honours</div>
+                            <div class="grade-badge">First Class Honours (CGPA: 3.716)</div>
                         </div>
                     </div>
 
@@ -349,7 +355,7 @@
                                 <span class="edu-year">2017 - 2018</span>
                             </div>
                             <div class="degree">Cambridge GCE A-Level</div>
-                            <div class="grade-badge">Math Gold Medal</div>
+                            <div class="grade-badge">1A 3B | Math Gold Medal</div>
                         </div>
                     </div>
                 </div>
@@ -378,9 +384,34 @@
         </div>
     </footer>
 
-    <!-- Initialize Icons -->
+    <!-- Initialize Icons and Mobile Logic -->
     <script>
+        // Icons
         lucide.createIcons();
+
+        // Mobile Menu Logic
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const nav = document.querySelector('.nav');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            
+            // Toggle Icon (Menu <-> X)
+            const icon = mobileToggle.querySelector('i'); // Assuming SVG is replaced
+            // Re-rendering icon is complex with Lucide script, simpler to toggle class and let CSS handle it,
+            // or just keep the menu icon. 
+            // Simple accessibility toggle:
+            const isExpanded = nav.classList.contains('active');
+            mobileToggle.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>
