@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-brand-100 selection:text-brand-900">
+    <div className="app-wrapper">
       <Header />
       <main>
         <Hero />
