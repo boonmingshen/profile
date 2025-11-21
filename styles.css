@@ -229,7 +229,7 @@ a {
 }
 
 .text-highlight {
-  color: var(--text-muted);
+  color: var(--accent-color);
 }
 
 .hero-description {
@@ -246,7 +246,7 @@ a {
 /* Buttons */
 .hero-actions {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -255,11 +255,12 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 12px 20px;
   border-radius: 8px;
   font-weight: 500;
   transition: all 0.2s;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -269,7 +270,7 @@ a {
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
+  opacity: 0.9;
   transform: translateY(-1px);
 }
 
@@ -351,13 +352,14 @@ a {
 .code-block {
   padding: 24px;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.6;
   color: var(--code-text);
 }
 
 .line {
   min-height: 21px;
+  white-space: pre-wrap;
 }
 
 .line.indent {
