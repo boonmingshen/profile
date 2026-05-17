@@ -1,5 +1,8 @@
 {
-  "name": "Ming Shen's Portfolio",
-  "description": "Personal portfolio of Ming Shen, an Embedded Software Engineer specializing in Linux, C, and C++.",
-  "requestFramePermissions": []
+  "name": "Boon Ming Shen | Senior Embedded Engineer",
+  "description": "Portfolio of Boon Ming Shen, Senior Embedded Software Engineer specializing in Zephyr RTOS, PTP, and Linux networking stacks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

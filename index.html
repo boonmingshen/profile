@@ -26,6 +26,7 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
 <body>
 
@@ -42,7 +43,7 @@
                 <div class="logo-icon">
                    <i data-lucide="cpu" width="20" height="20" stroke-width="2"></i>
                 </div>
-                <span class="logo-text">Boon Ming Shen</span>
+                <span class="logo-text">Ming.dev</span>
             </div>
 
             <!-- Nav Menu -->
@@ -73,7 +74,7 @@
                     <div class="hero-text animate-fade-up">
                         <div class="role-badge">
                             <i data-lucide="terminal" width="14" height="14" class="badge-icon"></i>
-                            <span>Embedded Software Engineer</span>
+                            <span>Senior Embedded Software Engineer</span>
                         </div>
                         <h1 class="hero-title">
                             Engineering the <br />
@@ -81,7 +82,7 @@
                             Interface.
                         </h1>
                         <p class="hero-description">
-                            I am <strong>Boon Ming Shen</strong>. I build robust embedded Linux solutions for automotive HPC platforms, specializing in kernel development, device drivers, and system integration.
+                            I am <strong>Boon Ming Shen</strong>. I build robust real-time systems at <strong>MaxLinear</strong>, specializing in Zephyr RTOS, PTP integration, and high-performance embedded networking.
                         </p>
                         
                         <div class="hero-actions">
@@ -124,7 +125,7 @@
                                         <span class="token-comment">// Initialize System Profile</span>
                                     </div>
                                     <div class="line">
-                                        <span class="token-keyword">#include</span> <span class="token-string">&lt;linux/module.h&gt;</span>
+                                        <span class="token-keyword">#include</span> <span class="token-string">&lt;zephyr/kernel.h&gt;</span>
                                     </div>
                                     <div class="line spacer"></div>
                                     <div class="line">
@@ -135,30 +136,23 @@
                                         <span class="token-text">{</span>
                                     </div>
                                     <div class="line indent">
-                                        <span class="token-text">.domain</span>
+                                        <span class="token-text">.company</span>
                                         <span class="token-op">=</span>
-                                        <span class="token-const">KERNEL_SPACE</span>,
+                                        <span class="token-string">"MaxLinear"</span>,
                                     </div>
                                     <div class="line indent">
                                         <span class="token-text">.expertise</span>
                                         <span class="token-op">=</span>
                                         <span class="token-text">{</span>
-                                            <span class="token-string">"Embedded Linux"</span>,
-                                            <span class="token-string">"Device Drivers"</span>,
-                                            <span class="token-string">"Yocto/Bitbake"</span>
-                                        <span class="token-text">}</span>,
-                                    </div>
-                                    <div class="line indent">
-                                        <span class="token-text">.languages</span>
-                                        <span class="token-op">=</span>
-                                        <span class="token-op">(</span><span class="token-type">char</span>*<span class="token-op">[])</span> <span class="token-text">{</span>
-                                            <span class="token-string">"C"</span>, <span class="token-string">"C++"</span>, <span class="token-string">"Bash"</span>
+                                            <span class="token-string">"Zephyr PTP"</span>,
+                                            <span class="token-string">"Linux Networking"</span>,
+                                            <span class="token-string">"DSA PTP"</span>
                                         <span class="token-text">}</span>,
                                     </div>
                                     <div class="line indent">
                                         <span class="token-text">.status</span>
                                         <span class="token-op">=</span>
-                                        <span class="token-const">READY_TO_DEPLOY</span>
+                                        <span class="token-const">SYNCING_NETWORKS</span>
                                     </div>
                                     <div class="line">
                                         <span class="token-text">};</span>
@@ -198,6 +192,29 @@
                 <div class="timeline">
                     <div class="pcb-line"></div>
                     
+                    <!-- Job 0: MaxLinear -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="card-top">
+                                <div class="job-role">
+                                    <h3 class="job-title">Senior Embedded Software Engineer</h3>
+                                    <span class="company-name">@ MaxLinear</span>
+                                </div>
+                                <div class="job-meta">
+                                    <span class="date-badge">Dec 2025 – Present</span>
+                                </div>
+                            </div>
+                            <ul class="job-details">
+                                <li>Lead development and integration of the Precision Time Protocol (PTP) module in Zephyr RTOS, enabling high-precision clock synchronization.</li>
+                                <li>Design, implement, and debug PTP networking features and stack components within Zephyr, ensuring robust operation on supported hardware platforms.</li>
+                                <li>Exploring DSA (Distributed Switch Architecture) Linux PTP implementation for industrial networking.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <!-- Job 1 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">
@@ -210,7 +227,7 @@
                                     <span class="company-name">@ Continental Automotive</span>
                                 </div>
                                 <div class="job-meta">
-                                    <span class="date-badge">Feb 2023 – Present</span>
+                                    <span class="date-badge">Feb 2023 – Nov 2025</span>
                                 </div>
                             </div>
                             <ul class="job-details">
@@ -274,6 +291,7 @@
                             <div class="tech-tag">Device Drivers</div>
                             <div class="tech-tag">Yocto Project</div>
                             <div class="tech-tag">U-Boot</div>
+                            <div class="tech-tag">SOME/IP</div>
                             <div class="tech-tag">System Optimization</div>
                             <div class="tech-tag">Boot Time</div>
                         </div>
@@ -306,16 +324,13 @@
                             <div class="skill-icon-box">
                                 <i data-lucide="zap" width="24"></i>
                             </div>
-                            <h3>Automotive Systems</h3>
+                            <h3>Networking & RTOS</h3>
                         </div>
                         <div class="skill-body">
-                            <div class="tech-tag">V4L2</div>
-                            <div class="tech-tag">Framebuffer</div>
-                            <div class="tech-tag">CAN Bus</div>
-                            <div class="tech-tag">Ethernet</div>
-                            <div class="tech-tag">SOME/IP</div>
-                            <div class="tech-tag">IPC</div>
-                            <div class="tech-tag">Agile / SAFe</div>
+                            <div class="tech-tag highlight">Zephyr RTOS</div>
+                            <div class="tech-tag">PTP (IEEE 1588)</div>
+                            <div class="tech-tag">Time Synchronization</div>
+                            <div class="tech-tag">Linux PTP / DSA</div>
                         </div>
                     </div>
 
@@ -368,7 +383,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-left">
-                <span class="footer-logo">Boon Ming Shen</span>
+                <span class="footer-logo">Ming.dev</span>
                 <p class="copyright">Built for performance. © 2025 Boon Ming Shen.</p>
             </div>
             <div class="social-links">
@@ -410,5 +425,6 @@
             });
         });
     </script>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>

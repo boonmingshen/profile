@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ArrowRight, Cpu, Terminal, Zap } from 'lucide-react';
+import { Github, ArrowRight, Cpu, Terminal, Zap, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
@@ -20,32 +20,35 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.5 }}
             >
               <span className="role-badge">
-                Embedded Software Engineer
+                Senior Embedded Software Engineer
               </span>
               <h1 className="hero-title">
                 Hello, <br />
                 I'm Ming Shen.
               </h1>
               <p className="hero-description">
-                I engineer robust systems at the hardware-software interface. Specializing in embedded Linux, kernel development, C, and C++ to power the devices of tomorrow.
+                I engineer robust real-time systems at the hardware-software interface. Currently at <strong>MaxLinear</strong> leading PTP integration for Zephyr RTOS and specializing in Linux networking stacks.
               </p>
               
               <div className="hero-actions">
                 <a 
-                  href="https://github.com"
+                  href="https://github.com/boonmingshen"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
                   <Github className="mr-2" size={20} />
-                  <span>Visit Github</span>
+                  <span>GitHub</span>
                   <ArrowRight className="ml-2" size={16} />
                 </a>
                 <a 
-                  href="mailto:your-email@example.com"
-                  className="btn btn-secondary"
+                  href="https://www.linkedin.com/in/ming-shen-boon-046a3a1b9/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-linkedin"
                 >
-                  Contact Me
+                  <Linkedin className="mr-2" size={20} />
+                  LinkedIn
                 </a>
               </div>
             </motion.div>
@@ -78,34 +81,30 @@ const Hero: React.FC = () => {
                    <div className="code-block">
                       <div className="line">
                         <span className="token-keyword">struct</span>
-                        <span className="token-type">Engineer</span>
-                        <span className="token-text">ming</span>
+                        <span className="token-type">WorkProfile</span>
+                        <span className="token-text">senior_dev</span>
                         <span className="token-op">=</span>
                         <span className="token-text">{'{'}</span>
                       </div>
                       <div className="line indent">
+                         <span className="token-text">.company</span>
+                         <span className="token-op">=</span>
+                         <span className="token-string">"MaxLinear"</span>,
+                      </div>
+                      <div className="line indent">
+                         <span className="token-text">.project</span>
+                         <span className="token-op">=</span>
+                         <span className="token-string">"Zephyr PTP Setup"</span>,
+                      </div>
+                      <div className="line indent">
                          <span className="token-text">.focus</span>
                          <span className="token-op">=</span>
-                         <span className="token-string">"Linux Kernel"</span>,
+                         <span className="token-string">"Time Sync stacks"</span>,
                       </div>
                       <div className="line indent">
-                         <span className="token-text">.stack</span>
+                         <span className="token-text">.status</span>
                          <span className="token-op">=</span>
-                         <span className="token-text">{'{'}</span>
-                            <span className="token-string">"C"</span>,
-                            <span className="token-string">"C++"</span>,
-                            <span className="token-string">"Bash"</span>
-                         <span className="token-text">{'}'}</span>,
-                      </div>
-                      <div className="line indent">
-                         <span className="token-text">.mcu_target</span>
-                         <span className="token-op">=</span>
-                         <span className="token-string">"ARM64"</span>,
-                      </div>
-                      <div className="line indent">
-                         <span className="token-text">.optimization</span>
-                         <span className="token-op">=</span>
-                         <span className="token-const">HIGH_PRIORITY</span>
+                         <span className="token-const">READY_TO_SYNC</span>
                       </div>
                       <div className="line">
                         <span className="token-text">{'};'}</span>

@@ -12,12 +12,21 @@ const Header: React.FC = () => {
             </div>
             <span className="logo-text">Ming.dev</span>
           </div>
-          <nav>
+          <nav className="nav">
+            <a href="#experience" className="nav-link">
+              <span className="nav-num">01.</span> Experience
+            </a>
+            <a href="#skills" className="nav-link">
+              <span className="nav-num">02.</span> Skills
+            </a>
+            <a href="#education" className="nav-link">
+              <span className="nav-num">03.</span> Education
+            </a>
             <a 
-              href="https://github.com" 
+              href="https://github.com/boonmingshen" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="nav-link"
+              className="nav-link highlight-link"
             >
               GitHub
             </a>
