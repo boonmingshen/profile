@@ -21,16 +21,16 @@ const Education: React.FC = () => {
   ];
 
   return (
-    <section id="education" className="section">
+    <section id="education" className="section bg-offset">
       <div className="container">
         <div className="section-header">
           <motion.h2 
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="section-title"
           >
-            <span className="mono-prefix">03.</span> Education
+            <span className="mono-prefix">04.</span> Education
           </motion.h2>
           <div className="section-line"></div>
         </div>

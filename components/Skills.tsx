@@ -24,7 +24,7 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="section bg-offset">
+    <section id="skills" className="section">
       <div className="container">
         <div className="section-header">
           <motion.h2 
@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
             viewport={{ once: true }}
             className="section-title"
           >
-            <span className="mono-prefix">02.</span> Technical Stack
+            <span className="mono-prefix">03.</span> Technical Stack
           </motion.h2>
           <div className="section-line"></div>
         </div>

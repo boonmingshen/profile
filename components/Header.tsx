@@ -16,11 +16,14 @@ const Header: React.FC = () => {
             <a href="#experience" className="nav-link">
               <span className="nav-num">01.</span> Experience
             </a>
+            <a href="#projects" className="nav-link">
+              <span className="nav-num">02.</span> Projects
+            </a>
             <a href="#skills" className="nav-link">
-              <span className="nav-num">02.</span> Skills
+              <span className="nav-num">03.</span> Skills
             </a>
             <a href="#education" className="nav-link">
-              <span className="nav-num">03.</span> Education
+              <span className="nav-num">04.</span> Education
             </a>
             <a 
               href="https://github.com/boonmingshen" 
