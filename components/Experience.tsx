@@ -8,9 +8,10 @@ const Experience: React.FC = () => {
       company: "MaxLinear",
       period: "Dec 2025 – Present",
       details: [
-        "Lead development and integration of the Precision Time Protocol (PTP) module in Zephyr RTOS, enabling high-precision clock synchronization.",
+        "Lead development and integration of the Precision Time Protocol (PTP) module in Zephyr RTOS for high-precision clock synchronization.",
         "Design, implement, and debug PTP networking features and stack components within Zephyr, ensuring robust operation on supported hardware platforms.",
-        "Exploring DSA (Distributed Switch Architecture) Linux PTP implementation for industrial networking."
+        "Pre-Silicon Chip Testing & Verification: Pre-silicon chip testing and validation for the Synopsys XGMAC IP, specifically validating IEEE 1588 Precision Time Protocol (PTP) hardware timestamping and network driver performance prior to tape-out.",
+        "AI Cost-Optimization Infrastructure: Self-hosted and configured an on-premise local LLM instance (Ollama/vLLM) for the engineering organization, mitigating API token fees, enhancing data privacy, and accelerating internal development workflows."
       ]
     },
     {

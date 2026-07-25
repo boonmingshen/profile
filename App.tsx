@@ -10,6 +10,10 @@ import Footer from './components/Footer';
 const App: React.FC = () => {
   return (
     <div className="app-wrapper">
+      <div className="tech-background">
+        <div className="grid-overlay"></div>
+        <div className="circuit-overlay"></div>
+      </div>
       <Header />
       <main>
         <Hero />

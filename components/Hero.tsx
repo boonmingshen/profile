@@ -1,14 +1,10 @@
 import React from 'react';
-import { Github, ArrowRight, Cpu, Terminal, Zap, Linkedin } from 'lucide-react';
+import { Github, Linkedin, FileText, Cpu, GitBranch, Lock, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
     <section className="hero-section">
-      {/* Background Elements */}
-      <div className="hero-bg-blob-1" />
-      <div className="hero-bg-blob-2" />
-
       <div className="container">
         <div className="hero-layout">
           
@@ -19,15 +15,16 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="role-badge">
-                Senior Embedded Software Engineer
-              </span>
+              <div className="role-badge">
+                &gt;_ Senior Embedded Software Engineer
+              </div>
               <h1 className="hero-title">
-                Hello, <br />
-                I'm Ming Shen.
+                Engineering the <br />
+                <span className="text-highlight">Hardware-Software</span> <br />
+                Interface.
               </h1>
               <p className="hero-description">
-                I engineer robust real-time systems at the hardware-software interface. Currently at <strong>MaxLinear</strong> leading PTP integration for Zephyr RTOS and specializing in Linux networking stacks.
+                I am <strong>Boon Ming Shen</strong>. I build robust real-time systems at <strong>MaxLinear</strong>, specializing in Zephyr RTOS, PTP integration, and high-performance embedded networking.
               </p>
               
               <div className="hero-actions">
@@ -37,9 +34,8 @@ const Hero: React.FC = () => {
                   rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
-                  <Github className="mr-2" size={20} />
+                  <Github size={20} />
                   <span>GitHub</span>
-                  <ArrowRight className="ml-2" size={16} />
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/ming-shen-boon-046a3a1b9/"
@@ -47,14 +43,23 @@ const Hero: React.FC = () => {
                   rel="noopener noreferrer"
                   className="btn btn-linkedin"
                 >
-                  <Linkedin className="mr-2" size={20} />
-                  LinkedIn
+                  <Linkedin size={20} />
+                  <span>LinkedIn</span>
+                </a>
+                <a 
+                  href="assets/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline"
+                >
+                  <FileText size={18} />
+                  <span>Resume</span>
                 </a>
               </div>
             </motion.div>
           </div>
 
-          {/* Visual/Abstract Art */}
+          {/* Apple Code Window Mock */}
           <div className="hero-visual">
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
@@ -63,86 +68,74 @@ const Hero: React.FC = () => {
               className="code-card-wrapper"
             >
               {/* Decorative glow behind card */}
-              <div className="code-card-glow"></div>
+              <div className="card-glow"></div>
               
-              {/* Light Theme Code Card */}
+              {/* Dark Theme Apple Terminal Window */}
               <div className="code-card">
                 <div className="card-header">
-                   <div className="window-controls">
-                      <div className="control-dot dot-red"></div>
-                      <div className="control-dot dot-yellow"></div>
-                      <div className="control-dot dot-green"></div>
-                   </div>
-                   <div className="filename">system_core.c</div>
-                   <div style={{width: '40px'}}></div> {/* Spacer for balance */}
+                  <div className="window-controls">
+                    <div className="control-dot dot-red"></div>
+                    <div className="control-dot dot-yellow"></div>
+                    <div className="control-dot dot-green"></div>
+                  </div>
+                  <div className="tab-active">
+                    <Cpu size={14} />
+                    <span>engineer_profile.c</span>
+                  </div>
                 </div>
-                   
-                   {/* C Code Snippet */}
-                   <div className="code-block">
-                      <div className="line">
-                        <span className="token-keyword">struct</span>
-                        <span className="token-type">WorkProfile</span>
-                        <span className="token-text">senior_dev</span>
-                        <span className="token-op">=</span>
-                        <span className="token-text">{'{'}</span>
-                      </div>
-                      <div className="line indent">
-                         <span className="token-text">.company</span>
-                         <span className="token-op">=</span>
-                         <span className="token-string">"MaxLinear"</span>,
-                      </div>
-                      <div className="line indent">
-                         <span className="token-text">.project</span>
-                         <span className="token-op">=</span>
-                         <span className="token-string">"Zephyr PTP Setup"</span>,
-                      </div>
-                      <div className="line indent">
-                         <span className="token-text">.focus</span>
-                         <span className="token-op">=</span>
-                         <span className="token-string">"Time Sync stacks"</span>,
-                      </div>
-                      <div className="line indent">
-                         <span className="token-text">.status</span>
-                         <span className="token-op">=</span>
-                         <span className="token-const">READY_TO_SYNC</span>
-                      </div>
-                      <div className="line">
-                        <span className="token-text">{'};'}</span>
-                      </div>
-                   </div>
+                
+                {/* C Code Snippet */}
+                <div className="code-block">
+                  <div className="line">
+                    <span className="token-comment">// Initialize System Profile</span>
+                  </div>
+                  <div className="line">
+                    <span className="token-keyword">#include</span>{' '}
+                    <span className="token-string">&lt;zephyr/kernel.h&gt;</span>
+                  </div>
+                  <div className="spacer"></div>
+                  <div className="line">
+                    <span className="token-keyword">static struct</span>{' '}
+                    <span className="token-type">engineer_t</span>{' '}
+                    <span className="token-text">boon_ming_shen = &#123;</span>
+                  </div>
+                  <div className="line indent">
+                    <span className="token-text">.company =</span>{' '}
+                    <span className="token-string">"MaxLinear"</span>,
+                  </div>
+                  <div className="line indent">
+                    <span className="token-text">.expertise = &#123;</span>{' '}
+                    <span className="token-string">"Zephyr PTP"</span>,{' '}
+                    <span className="token-string">"Linux Networking"</span>,{' '}
+                    <span className="token-string">"DSA"</span> &#125;,
+                  </div>
+                  <div className="line indent">
+                    <span className="token-text">.status =</span>{' '}
+                    <span className="token-const">SYNCING_NETWORKS</span>
+                  </div>
+                  <div className="line">
+                    <span className="token-text">&#125;;</span>
+                  </div>
+                </div>
 
-                   <div className="features-grid">
-                      <div className="feature-item">
-                         <div className="feature-icon" style={{color: 'var(--syntax-type)'}}>
-                            <Cpu size={18} />
-                         </div>
-                         <div className="feature-text-group">
-                            <div className="feature-label">Systems</div>
-                            <div className="feature-value">Embedded</div>
-                         </div>
-                      </div>
-                      <div className="feature-item">
-                         <div className="feature-icon" style={{color: 'var(--text-primary)'}}>
-                            <Terminal size={18} />
-                         </div>
-                         <div className="feature-text-group">
-                            <div className="feature-label">Platform</div>
-                            <div className="feature-value">Linux</div>
-                         </div>
-                      </div>
-                      <div className="feature-item full-width">
-                         <div className="feature-icon" style={{color: 'var(--syntax-constant)'}}>
-                            <Zap size={18} />
-                         </div>
-                         <div className="feature-text-group">
-                            <div className="feature-label">Performance</div>
-                            <div className="feature-value">Real-time Optimized</div>
-                         </div>
-                      </div>
-                   </div>
+                <div className="status-bar">
+                  <div className="status-item">
+                    <GitBranch size={12} />
+                    <span>master</span>
+                  </div>
+                  <div className="status-item">
+                    <Lock size={12} />
+                    <span>/dev/root</span>
+                  </div>
+                  <div className="status-item success">
+                    <CheckCircle2 size={12} />
+                    <span>Build Passing</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
+
         </div>
       </div>
     </section>

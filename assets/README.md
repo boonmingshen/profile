@@ -1,2 +1,1 @@
-This is the folder to upload the resume.
-The tittle of the file must be "resume.pdf"
+This is the folder to upload the resume. The tittle of the file must be "resume.pdf"

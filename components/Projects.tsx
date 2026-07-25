@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, ClipboardCheck, Crown, ExternalLink } from 'lucide-react';
+import { Globe, ClipboardCheck, Crown, Binary, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {
@@ -27,6 +27,14 @@ const Projects: React.FC = () => {
       description: "Designed and built an interactive browser-based chess application using HTML, CSS, and JavaScript. Focused on clean UI design, game-state handling, rule logic, and smooth web execution.",
       tags: ["JavaScript", "HTML5 Canvas", "Chess Engine Logic", "CSS Grid"],
       icon: <Crown size={22} />,
+    },
+    {
+      title: "Bit Converter Web Application",
+      subtitle: "Live Project | Developer",
+      link: "https://boonmingshen.github.io/Bit-Converter-/",
+      description: "Designed and deployed a specialized developer tool for real-time bit manipulation, binary-hexadecimal-decimal conversions, and visual bit field inspection.",
+      tags: ["JavaScript", "Bitwise Ops", "Binary / Hex", "HTML5 / CSS3"],
+      icon: <Binary size={22} />,
     },
   ];
 

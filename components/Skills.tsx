@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, Terminal, Zap } from 'lucide-react';
+import { Cpu, Terminal, Zap, Bot } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Skills: React.FC = () => {
@@ -10,16 +10,22 @@ const Skills: React.FC = () => {
       skills: ["Kernel Programming", "Device Drivers", "Yocto Project", "U-Boot", "SOME/IP", "System Optimization", "Boot Time"]
     },
     {
-      title: "Languages & Tools",
-      icon: <Terminal size={24} />,
-      skills: ["C / C++", "Python", "Shell / Bash", "Git", "GDB", "Bitbake", "Verilog"],
-      highlight: "C / C++"
-    },
-    {
       title: "Networking & RTOS",
       icon: <Zap size={24} />,
-      skills: ["Zephyr RTOS", "PTP (IEEE 1588)", "Time Synchronization", "Linux PTP / DSA"],
+      skills: ["Zephyr RTOS", "PTP (IEEE 1588)", "Synopsys XGMAC IP", "Pre-Silicon Verification", "Linux PTP / DSA"],
       highlight: "Zephyr RTOS"
+    },
+    {
+      title: "AI & Infrastructure",
+      icon: <Bot size={24} />,
+      skills: ["Local LLM Hosting", "Ollama / vLLM", "AI-Assisted Prototyping", "Prompt Engineering"],
+      highlight: "Local LLM Hosting"
+    },
+    {
+      title: "Languages & Tools",
+      icon: <Terminal size={24} />,
+      skills: ["C / C++", "Python", "Shell / Bash", "Git", "GDB", "Bitbake", "MATLAB"],
+      highlight: "C / C++"
     }
   ];
 
