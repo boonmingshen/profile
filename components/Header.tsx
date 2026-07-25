@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Terminal, Download, Menu, X } from 'lucide-react';
+import resumePdf from '../assets/resume.pdf';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ const Header: React.FC = () => {
             <span className="nav-num">04.</span> Education
           </a>
           <a 
-            href="./assets/resume.pdf" 
+            href={resumePdf} 
             target="_blank" 
             rel="noopener noreferrer"
             className="nav-link highlight-link"

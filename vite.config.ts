@@ -5,9 +5,10 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ command, mode }) => {
     const env = loadEnv(mode, '.', '');
     
-    // Use '/' during dev server, and relative/repo base during build for GitHub Pages
+    // Determine base path for GitHub Pages or local preview
+    const repoName = process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split('/')[1] : '';
     const base = command === 'build'
-      ? (process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` : './')
+      ? (repoName && !repoName.endsWith('.github.io') ? `/${repoName}/` : './')
       : '/';
 
     return {

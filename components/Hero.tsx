@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, FileText, Cpu, GitBranch, Lock, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import resumePdf from '../assets/resume.pdf';
 
 const Hero: React.FC = () => {
   return (
@@ -47,7 +48,7 @@ const Hero: React.FC = () => {
                   <span>LinkedIn</span>
                 </a>
                 <a 
-                  href="./assets/resume.pdf"
+                  href={resumePdf}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline"
