@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
                   <span>LinkedIn</span>
                 </a>
                 <a 
-                  href="assets/resume.pdf"
+                  href="./assets/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline"

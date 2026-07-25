@@ -36,7 +36,7 @@ const Header: React.FC = () => {
             <span className="nav-num">04.</span> Education
           </a>
           <a 
-            href="assets/resume.pdf" 
+            href="./assets/resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="nav-link highlight-link"
